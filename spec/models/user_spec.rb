@@ -49,4 +49,9 @@ RSpec.describe User, type: :model do
     )
     expect(user.name).to eq "John Doe"
   end
+
+  # 有効なファクトリを持つこと
+  it "has a valid factory" do
+    expect(FactoryBot.build(:user)).to be_valid
+  end
 end
